@@ -1,12 +1,13 @@
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
-    default: "durkio",
+    default: "primary",
     values: [
       {
-        name: "durkio",
-        value: "rgb(31, 33, 36)",
+        name: "primary",
+        value: "rgb(34, 36, 38)",
       },
     ],
   },
+  layout: "fullscreen",
 };

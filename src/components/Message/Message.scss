@@ -14,6 +14,9 @@
   }
 
   .message__body {
+    display: flex;
+    flex-direction: column;
+
     .message__body__header {
       display: flex;
       align-items: center;
@@ -36,7 +39,12 @@
       small {
         font-size: 0.75rem;
         font-weight: 600;
+        color: $color-primary;
       }
+    }
+    .message__body__text {
+      color: $color-primary;
+      flex: 1;
     }
   }
 }

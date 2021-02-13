@@ -3,11 +3,21 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import Navbar, { NavbarProps } from "./Navbar";
+import { MemoryRouter } from "react-router-dom";
 
 export default {
   title: "components/Navbar",
   component: Navbar,
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <div style={{ height: "100vh", width: "100vw" }}>
+          <Story />
+        </div>
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
