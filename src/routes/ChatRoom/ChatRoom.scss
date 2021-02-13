@@ -71,9 +71,16 @@
     width: 100%;
     padding: 0 40px;
     flex: 1;
+    overflow: scroll;
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .chatRoom__messageInput {
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
   }
 }

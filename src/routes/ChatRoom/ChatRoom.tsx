@@ -33,6 +33,13 @@ const ChatRoom: FC = () => {
       </div>
       <div className="chatRoom__messages">
         <Message />
+        <Message />
+        <Message />
+        <Message />
+        <Message />
+        <Message />
+        <Message />
+        <Message />
       </div>
       <div className="chatRoom__messageInput">
         <MessageInput />

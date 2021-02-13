@@ -6,10 +6,11 @@ import { IconContext } from "react-icons";
 export interface MessageInputProps {}
 
 const MessageInput: FC<MessageInputProps> = ({ ...props }) => {
-  const [messageInputRows, setMessageInputRows] = useState(3);
+  const [messageInputRows, setMessageInputRows] = useState(2);
+  const [messageInputValue, setMessageInputValue] = useState("");
 
   const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    const messageMinInputRows = 3;
+    const messageMinInputRows = 2;
     const messageMaxInputRows = 8;
     const textareaLineHeight = 20;
 
@@ -30,6 +31,7 @@ const MessageInput: FC<MessageInputProps> = ({ ...props }) => {
     setMessageInputRows(
       currentRows < messageMaxInputRows ? currentRows : messageMaxInputRows
     );
+    setMessageInputValue(e.target.value);
   };
 
   return (
@@ -40,6 +42,7 @@ const MessageInput: FC<MessageInputProps> = ({ ...props }) => {
         wrap="soft"
         rows={messageInputRows}
         onChange={handleInputChange}
+        value={messageInputValue}
       />
       <IconContext.Provider value={{ size: "1.25rem" }}>
         <div className="messageInput__options">
