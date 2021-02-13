@@ -6,6 +6,21 @@ export default {
   title: "components/MessageInput",
   component: MessageInput,
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          height: "100vh",
+          padding: "40px",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div style={{ flex: 1 }}></div>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<MessageInputProps> = (args) => <MessageInput {...args} />;
