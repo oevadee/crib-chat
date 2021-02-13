@@ -1,4 +1,5 @@
 @import "../../_variables";
+$nav-font-amount: 2;
 
 .navbar {
   height: 100%;
@@ -11,30 +12,31 @@
   justify-content: space-between;
 
   .navbar__logo {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   nav {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
 
-    svg {
-      margin-bottom: 15px;
+    .navbar__navIcons {
+      height: $nav-font-amount * 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
   .navbar__account {
+    height: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      margin-top: 15px;
     }
   }
 }

@@ -3,6 +3,7 @@ import "./ChatRoom.scss";
 import { VscPinned } from "react-icons/vsc";
 import { AiOutlineInfoCircle, AiOutlineStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import Message from "../../components/Message/Message";
 
 const ChatRoom: FC = () => {
   return (
@@ -28,6 +29,9 @@ const ChatRoom: FC = () => {
             </div>
           </div>
         </IconContext.Provider>
+      </div>
+      <div className="chatRoom__messages">
+        <Message />
       </div>
     </div>
   );
