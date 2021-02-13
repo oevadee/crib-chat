@@ -1,0 +1,39 @@
+@import "../../_variables";
+$messageInput-icons-amount: 2;
+
+.messageInput {
+  width: 100%;
+  border: $border-secondary;
+  border-radius: 10px;
+  background: $background-input-secondary;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  textarea {
+    width: calc(100% - 80px);
+    margin: 0 40px 20px 40px;
+    background: none;
+    border: none;
+    color: $color-secondary;
+    outline: none;
+    resize: none;
+    line-height: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .messageInput__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $messageInput-icons-amount * 30px;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}

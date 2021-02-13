@@ -4,6 +4,7 @@ import { VscPinned } from "react-icons/vsc";
 import { AiOutlineInfoCircle, AiOutlineStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Message from "../../components/Message/Message";
+import MessageInput from "../../components/MessageInput/MessageInput";
 
 const ChatRoom: FC = () => {
   return (
@@ -32,6 +33,9 @@ const ChatRoom: FC = () => {
       </div>
       <div className="chatRoom__messages">
         <Message />
+      </div>
+      <div className="chatRoom__messageInput">
+        <MessageInput />
       </div>
     </div>
   );
