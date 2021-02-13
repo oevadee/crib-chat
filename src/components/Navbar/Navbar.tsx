@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ ...props }) => {
           <NavLink to="/">
             <BiSearchAlt />
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/chatroom">
             <AiOutlineMessage />
           </NavLink>
         </nav>

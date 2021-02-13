@@ -2,6 +2,7 @@ import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home/Home";
+import ChatRoom from "./routes/ChatRoom/ChatRoom";
 
 function App() {
   return (
@@ -9,8 +10,11 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/about">
+          <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/chatroom">
+            <ChatRoom />
           </Route>
         </Switch>
       </Router>
