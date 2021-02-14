@@ -1,0 +1,95 @@
+Date : 2021-02-14 14:51:42
+Directory : /Users/adee/Desktop/crib-chat
+Total : 47 files,  1972 codes, 65 comments, 317 blanks, all 2354 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| XML              |          2 |        608 |          2 |         34 |        644 |
+| TypeScript React |         20 |        529 |         24 |         86 |        639 |
+| SCSS             |         12 |        456 |         15 |        112 |        583 |
+| HTML             |          2 |        118 |         23 |         35 |        176 |
+| JSON             |          3 |        113 |          0 |          3 |        116 |
+| JavaScript       |          4 |         57 |          0 |          8 |         65 |
+| CSS              |          2 |         53 |          0 |          5 |         58 |
+| Markdown         |          1 |         38 |          0 |         33 |         71 |
+| TypeScript       |          1 |          0 |          1 |          1 |          2 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                               | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                  |         47 |      1,972 |         65 |        317 |      2,354 |
+| .storybook                                                                         |          3 |        120 |          0 |         36 |        156 |
+| public                                                                             |          4 |        653 |         25 |         36 |        714 |
+| public/img                                                                         |          2 |        608 |          2 |         34 |        644 |
+| src                                                                                |         37 |      1,073 |         40 |        210 |      1,323 |
+| src/components                                                                     |         18 |        560 |          1 |         99 |        660 |
+| src/components/Button                                                              |          3 |         84 |          0 |         18 |        102 |
+| src/components/Header                                                              |          3 |         99 |          0 |         18 |        117 |
+| src/components/Input                                                               |          3 |        107 |          0 |         19 |        126 |
+| src/components/Message                                                             |          3 |         89 |          0 |         16 |        105 |
+| src/components/MessageInput                                                        |          3 |         76 |          0 |         13 |         89 |
+| src/components/Navbar                                                              |          3 |        105 |          1 |         15 |        121 |
+| src/routes                                                                         |          6 |        175 |          0 |         32 |        207 |
+| src/routes/ChatRoom                                                                |          2 |         47 |          0 |          8 |         55 |
+| src/routes/Home                                                                    |          2 |          8 |          0 |          5 |         13 |
+| src/routes/Profile                                                                 |          2 |        120 |          0 |         19 |        139 |
+| src/stories                                                                        |          6 |        169 |         20 |         26 |        215 |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                           | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/adee/Desktop/crib-chat/.storybook/main.js                                   | JavaScript       |          9 |          0 |          1 |         10 |
+| /Users/adee/Desktop/crib-chat/.storybook/preview-head.html                         | HTML             |         98 |          0 |         34 |        132 |
+| /Users/adee/Desktop/crib-chat/.storybook/preview.js                                | JavaScript       |         13 |          0 |          1 |         14 |
+| /Users/adee/Desktop/crib-chat/README.md                                            | Markdown         |         38 |          0 |         33 |         71 |
+| /Users/adee/Desktop/crib-chat/package.json                                         | JSON             |         62 |          0 |          1 |         63 |
+| /Users/adee/Desktop/crib-chat/public/img/Abstract-bg.svg                           | XML              |        260 |          1 |          4 |        265 |
+| /Users/adee/Desktop/crib-chat/public/img/Abstract-bg2.svg                          | XML              |        348 |          1 |         30 |        379 |
+| /Users/adee/Desktop/crib-chat/public/index.html                                    | HTML             |         20 |         23 |          1 |         44 |
+| /Users/adee/Desktop/crib-chat/public/manifest.json                                 | JSON             |         25 |          0 |          1 |         26 |
+| /Users/adee/Desktop/crib-chat/src/App.scss                                         | SCSS             |          5 |          0 |          1 |          6 |
+| /Users/adee/Desktop/crib-chat/src/App.tsx                                          | TypeScript React |         27 |          0 |          3 |         30 |
+| /Users/adee/Desktop/crib-chat/src/__variables.scss                                 | SCSS             |         15 |          0 |          6 |         21 |
+| /Users/adee/Desktop/crib-chat/src/components/Button/Button.scss                    | SCSS             |         33 |          0 |          9 |         42 |
+| /Users/adee/Desktop/crib-chat/src/components/Button/Button.stories.tsx             | TypeScript React |         35 |          0 |          5 |         40 |
+| /Users/adee/Desktop/crib-chat/src/components/Button/Button.tsx                     | TypeScript React |         16 |          0 |          4 |         20 |
+| /Users/adee/Desktop/crib-chat/src/components/Header/Header.scss                    | SCSS             |         55 |          0 |         10 |         65 |
+| /Users/adee/Desktop/crib-chat/src/components/Header/Header.stories.tsx             | TypeScript React |         11 |          0 |          4 |         15 |
+| /Users/adee/Desktop/crib-chat/src/components/Header/Header.tsx                     | TypeScript React |         33 |          0 |          4 |         37 |
+| /Users/adee/Desktop/crib-chat/src/components/Input/Input.scss                      | SCSS             |         42 |          0 |          9 |         51 |
+| /Users/adee/Desktop/crib-chat/src/components/Input/Input.stories.tsx               | TypeScript React |         37 |          0 |          5 |         42 |
+| /Users/adee/Desktop/crib-chat/src/components/Input/Input.tsx                       | TypeScript React |         28 |          0 |          5 |         33 |
+| /Users/adee/Desktop/crib-chat/src/components/Message/Message.scss                  | SCSS             |         43 |          0 |          8 |         51 |
+| /Users/adee/Desktop/crib-chat/src/components/Message/Message.stories.tsx           | TypeScript React |         18 |          0 |          4 |         22 |
+| /Users/adee/Desktop/crib-chat/src/components/Message/Message.tsx                   | TypeScript React |         28 |          0 |          4 |         32 |
+| /Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.js          | JavaScript       |         23 |          0 |          4 |         27 |
+| /Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.scss        | SCSS             |         27 |          0 |          5 |         32 |
+| /Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.stories.tsx | TypeScript React |         26 |          0 |          4 |         30 |
+| /Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.scss                    | SCSS             |         37 |          0 |          6 |         43 |
+| /Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.stories.tsx             | TypeScript React |         21 |          1 |          5 |         27 |
+| /Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.tsx                     | TypeScript React |         47 |          0 |          4 |         51 |
+| /Users/adee/Desktop/crib-chat/src/index.scss                                       | SCSS             |         98 |         15 |         37 |        150 |
+| /Users/adee/Desktop/crib-chat/src/index.tsx                                        | TypeScript React |         12 |          3 |          3 |         18 |
+| /Users/adee/Desktop/crib-chat/src/react-app-env.d.ts                               | TypeScript       |          0 |          1 |          1 |          2 |
+| /Users/adee/Desktop/crib-chat/src/reportWebVitals.js                               | JavaScript       |         12 |          0 |          2 |         14 |
+| /Users/adee/Desktop/crib-chat/src/routes/ChatRoom/ChatRoom.scss                    | SCSS             |         21 |          0 |          5 |         26 |
+| /Users/adee/Desktop/crib-chat/src/routes/ChatRoom/ChatRoom.tsx                     | TypeScript React |         26 |          0 |          3 |         29 |
+| /Users/adee/Desktop/crib-chat/src/routes/Home/Home.scss                            | SCSS             |          0 |          0 |          1 |          1 |
+| /Users/adee/Desktop/crib-chat/src/routes/Home/Home.tsx                             | TypeScript React |          8 |          0 |          4 |         12 |
+| /Users/adee/Desktop/crib-chat/src/routes/Profile/Profile.scss                      | SCSS             |         80 |          0 |         15 |         95 |
+| /Users/adee/Desktop/crib-chat/src/routes/Profile/Profile.tsx                       | TypeScript React |         40 |          0 |          4 |         44 |
+| /Users/adee/Desktop/crib-chat/src/stories/Button.stories.tsx                       | TypeScript React |         30 |          1 |          8 |         39 |
+| /Users/adee/Desktop/crib-chat/src/stories/Button.tsx                               | TypeScript React |         28 |         18 |          3 |         49 |
+| /Users/adee/Desktop/crib-chat/src/stories/Header.stories.tsx                       | TypeScript React |         14 |          1 |          6 |         21 |
+| /Users/adee/Desktop/crib-chat/src/stories/Header.tsx                               | TypeScript React |         44 |          0 |          4 |         48 |
+| /Users/adee/Desktop/crib-chat/src/stories/button.css                               | CSS              |         30 |          0 |          1 |         31 |
+| /Users/adee/Desktop/crib-chat/src/stories/header.css                               | CSS              |         23 |          0 |          4 |         27 |
+| /Users/adee/Desktop/crib-chat/tsconfig.json                                        | JSON             |         26 |          0 |          1 |         27 |
+| Total                                                                              |                  |      1,972 |         65 |        317 |      2,354 |
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

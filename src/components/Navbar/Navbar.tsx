@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./Navbar.scss";
-import { GiBottledShadow } from "react-icons/gi";
+import { VscFlame } from "react-icons/vsc";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineMessage, AiOutlineBell } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
@@ -17,7 +17,9 @@ const Navbar: FC<NavbarProps> = ({ ...props }) => {
     >
       <div className="navbar">
         <div className="navbar__logo">
-          <GiBottledShadow color="rgb(250, 250, 250)" size="2rem" />
+          <Link to="/">
+            <VscFlame color="rgb(250, 250, 250)" size="2rem" />
+          </Link>
         </div>
         <nav>
           <div className="navbar__navIcons">

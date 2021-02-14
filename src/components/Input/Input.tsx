@@ -7,11 +7,11 @@ export interface InputProps {
   uiType: string;
 }
 
-const Input: FC<InputProps> = ({ placeholder = "", uiType }) => {
+const Input: FC<InputProps> = ({ placeholder = "", uiType, ...props }) => {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <div className={`input ${uiType}`}>
+    <div className={`input ${uiType}`} {...props}>
       {uiType === "search" && <AiOutlineSearch size="1.25rem" />}
       {uiType === "data" && (
         <label className={inputValue && "input__label-active"}>

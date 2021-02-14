@@ -1,0 +1,45 @@
+@import "../../_variables";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  color: $color-secondary;
+
+  .checkbox__input {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    input {
+      opacity: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      z-index: 3;
+
+      &:checked + .checkbox__control {
+        background: $background-accent;
+        border: 2px solid $background-accent;
+        svg {
+          transform: scale(1);
+        }
+      }
+    }
+    .checkbox__control {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 5px;
+      border: $border-secondary;
+      background: $background-input-secondary;
+
+      svg {
+        transition: transform $transition;
+        transform: scale(0);
+        transform-origin: bottom left;
+      }
+    }
+  }
+  label {
+    margin-left: 10px;
+  }
+}
