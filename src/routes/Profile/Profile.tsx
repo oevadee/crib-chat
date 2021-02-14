@@ -1,11 +1,30 @@
 import React, { FC } from "react";
-import { Route, Router, Switch, useRouteMatch } from "react-router-dom";
+import { Link, Route, Router, Switch, useRouteMatch } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import Input from "../../components/Input/Input";
 import "./Profile.scss";
+import { IconContext } from "react-icons";
+import { BsPersonFill } from "react-icons/bs";
+import { IoIosArrowForward } from "react-icons/io";
+import { AiOutlineBell } from "react-icons/ai";
 
 interface ProfileProps {}
+
+const profileRoutes = [
+  {
+    linkTo: "personal-informations",
+    h3: "Account Settings",
+    p: "Personal Informations, Email",
+    icon: <BsPersonFill />,
+  },
+  {
+    linkTo: "notifications",
+    h3: "Notifications",
+    p: "Type of notifications you want to receive",
+    icon: <AiOutlineBell />,
+  },
+];
 
 const Profile: FC<ProfileProps> = () => {
   const { path, url } = useRouteMatch();
@@ -25,6 +44,28 @@ const Profile: FC<ProfileProps> = () => {
             color="rgb(12, 99, 159)"
           />
         </div>
+
+        <IconContext.Provider value={{ size: "1.25rem" }}>
+          <div className="profile__settings__options">
+            {profileRoutes.map((route) => (
+              <Link
+                to={`${url}/${route.linkTo}`}
+                style={{ textDecoration: "none" }}
+              >
+                <div className="profile__settings__options__button">
+                  <div className="profile__settings__options__button__icon">
+                    {route.icon}
+                  </div>
+                  <div className="profile__settings__options__button__body">
+                    <h3>{route.h3}</h3>
+                    <p>{route.p}</p>
+                  </div>
+                  <IoIosArrowForward size="1.5rem" color="rgb(250, 250, 250)" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </IconContext.Provider>
       </div>
       <div className="profile__actions">
         <div className="profile__actions__header">

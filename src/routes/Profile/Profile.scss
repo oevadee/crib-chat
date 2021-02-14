@@ -26,6 +26,7 @@
       padding: 40px;
       position: relative;
       overflow: hidden;
+      margin-bottom: 40px;
 
       img {
         position: absolute;
@@ -46,6 +47,43 @@
         color: $color-link;
         margin-bottom: 40px;
         font-weight: 400;
+      }
+    }
+
+    .profile__settings__options {
+      display: flex;
+      flex-direction: column;
+
+      .profile__settings__options__button {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: $border-primary;
+        padding: 20px 0;
+        text-decoration: none;
+        color: $color-primary;
+
+        .profile__settings__options__button__icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 10px;
+          background: $background-accent;
+          display: grid;
+          place-items: center;
+          margin-right: 20px;
+
+          svg {
+            color: $color-link;
+          }
+        }
+        .profile__settings__options__button__body {
+          flex: 1;
+
+          h3 {
+            color: $color-secondary;
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }

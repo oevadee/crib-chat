@@ -27,5 +27,13 @@ $messageInput-icons-amount: 2;
     }
   }
 
-  $ck-font-size-base: 13px;
+  $ck-font-size-base: 15px;
+
+  .ck-editor__editable_inline {
+    max-height: 200px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
