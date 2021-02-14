@@ -7,32 +7,44 @@ import Profile from "./routes/Profile/Profile";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { useSelector } from "react-redux";
 import { SidebarState } from "./reducers/sidebarReducer";
-import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { toggleSidebar } from "./actions/sidebarAction";
+import Login from "./routes/Login/Login";
 
 function App() {
   const sidebarOpen = useSelector<SidebarState>((state) => state.sidebarOpen);
+  const sidebarDispatch = useDispatch();
+  const user = null;
 
-  useEffect(() => {
-    console.log(sidebarOpen);
-  }, [sidebarOpen]);
+  const onToggleSidebar = () => {
+    sidebarDispatch(toggleSidebar());
+  };
 
   return (
     <div className="app">
-      <Router>
-        <Navbar />
-        {sidebarOpen && <Sidebar />}
-        <Switch>
-          <Route path="/home">
-            <Home />
+      {user ? (
+        <Router>
+          <Navbar onToggleSidebar={onToggleSidebar} />
+          {sidebarOpen && <Sidebar />}
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/chatroom">
+              <ChatRoom />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+          </Switch>
+        </Router>
+      ) : (
+        <Router>
+          <Route path="/login">
+            <Login />
           </Route>
-          <Route path="/chatroom">
-            <ChatRoom />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-        </Switch>
-      </Router>
+        </Router>
+      )}
     </div>
   );
 }

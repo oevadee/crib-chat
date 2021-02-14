@@ -72,6 +72,12 @@ const Profile: FC<ProfileProps> = () => {
           <h2>Account Settings</h2>
         </div>
         <Switch>
+          <Route exact path={path}>
+            <div className="profile__actions__intro">
+              <img src="/img/Phone.svg" alt="phone" />
+              <p>You can edit your profile by choosing an option on the left</p>
+            </div>
+          </Route>
           <Route path={`${path}/personal-informations`}>
             <div className="profile__actions__personalInformations">
               <h3>Personal Informations</h3>

@@ -113,6 +113,23 @@
       }
     }
 
+    .profile__actions__intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100% - 250px);
+
+      img {
+        height: 60%;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
     .profile__actions__personalInformations {
       border-bottom: $border-primary;
       padding-bottom: 40px;
