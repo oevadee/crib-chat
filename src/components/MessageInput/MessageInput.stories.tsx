@@ -1,4 +1,5 @@
 import React from "react";
+import { Story, Meta } from "@storybook/react";
 import MessageInput from "./MessageInput";
 
 export default {
@@ -20,9 +21,9 @@ export default {
       </div>
     ),
   ],
-};
+} as Meta;
 
-const Template = (args) => <MessageInput {...args} />;
+const Template: Story = (args) => <MessageInput {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

@@ -1,0 +1,50 @@
+@import "../../_variables";
+
+.input {
+  background: $background-input-secondary;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg {
+    color: $color-primary;
+  }
+
+  label {
+    font-size: 1.25rem;
+    position: absolute;
+    color: $color-primary;
+    padding-left: 10px;
+    transition: all $transition;
+  }
+
+  .input__label-active {
+    transform: translate(-30%, -260%);
+    font-size: 1rem;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: $color-secondary;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 3;
+  }
+}
+
+.search {
+  padding-left: 10px;
+}
+
+.data {
+  padding: 10px 20px;
+  border: $border-secondary;
+
+  input {
+    font-size: 1.25rem;
+  }
+}
