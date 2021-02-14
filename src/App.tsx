@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home/Home";
 import ChatRoom from "./routes/ChatRoom/ChatRoom";
+import Profile from "./routes/Profile/Profile";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route path="/chatroom">
             <ChatRoom />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </Router>

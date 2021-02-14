@@ -1,0 +1,39 @@
+"filename", "language", "SCSS", "TypeScript", "TypeScript React", "CSS", "JavaScript", "JSON", "HTML", "Markdown", "comment", "blank", "total"
+"/Users/adee/Desktop/crib-chat/.storybook/main.js", "JavaScript", 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+"/Users/adee/Desktop/crib-chat/.storybook/preview-head.html", "HTML", 0, 0, 0, 0, 0, 0, 9, 0, 0, 1, 10
+"/Users/adee/Desktop/crib-chat/.storybook/preview.js", "JavaScript", 0, 0, 0, 0, 13, 0, 0, 0, 0, 1, 14
+"/Users/adee/Desktop/crib-chat/README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 38, 0, 33, 71
+"/Users/adee/Desktop/crib-chat/package.json", "JSON", 0, 0, 0, 0, 0, 62, 0, 0, 0, 1, 63
+"/Users/adee/Desktop/crib-chat/public/index.html", "HTML", 0, 0, 0, 0, 0, 0, 20, 0, 23, 1, 44
+"/Users/adee/Desktop/crib-chat/public/manifest.json", "JSON", 0, 0, 0, 0, 0, 25, 0, 0, 0, 1, 26
+"/Users/adee/Desktop/crib-chat/src/App.scss", "SCSS", 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/adee/Desktop/crib-chat/src/App.tsx", "TypeScript React", 0, 0, 23, 0, 0, 0, 0, 0, 0, 3, 26
+"/Users/adee/Desktop/crib-chat/src/__variables.scss", "SCSS", 12, 0, 0, 0, 0, 0, 0, 0, 0, 5, 17
+"/Users/adee/Desktop/crib-chat/src/components/Header/Header.scss", "SCSS", 55, 0, 0, 0, 0, 0, 0, 0, 0, 10, 65
+"/Users/adee/Desktop/crib-chat/src/components/Header/Header.stories.tsx", "TypeScript React", 0, 0, 11, 0, 0, 0, 0, 0, 0, 4, 15
+"/Users/adee/Desktop/crib-chat/src/components/Header/Header.tsx", "TypeScript React", 0, 0, 33, 0, 0, 0, 0, 0, 0, 4, 37
+"/Users/adee/Desktop/crib-chat/src/components/Message/Message.scss", "SCSS", 43, 0, 0, 0, 0, 0, 0, 0, 0, 8, 51
+"/Users/adee/Desktop/crib-chat/src/components/Message/Message.stories.tsx", "TypeScript React", 0, 0, 18, 0, 0, 0, 0, 0, 0, 4, 22
+"/Users/adee/Desktop/crib-chat/src/components/Message/Message.tsx", "TypeScript React", 0, 0, 28, 0, 0, 0, 0, 0, 0, 4, 32
+"/Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.js", "JavaScript", 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"/Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.scss", "SCSS", 27, 0, 0, 0, 0, 0, 0, 0, 0, 5, 32
+"/Users/adee/Desktop/crib-chat/src/components/MessageInput/MessageInput.stories.js", "JavaScript", 0, 0, 0, 0, 25, 0, 0, 0, 0, 4, 29
+"/Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.scss", "SCSS", 37, 0, 0, 0, 0, 0, 0, 0, 0, 6, 43
+"/Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.stories.tsx", "TypeScript React", 0, 0, 21, 0, 0, 0, 0, 0, 1, 5, 27
+"/Users/adee/Desktop/crib-chat/src/components/Navbar/Navbar.tsx", "TypeScript React", 0, 0, 45, 0, 0, 0, 0, 0, 0, 4, 49
+"/Users/adee/Desktop/crib-chat/src/index.scss", "SCSS", 98, 0, 0, 0, 0, 0, 0, 0, 15, 37, 150
+"/Users/adee/Desktop/crib-chat/src/index.tsx", "TypeScript React", 0, 0, 12, 0, 0, 0, 0, 0, 3, 3, 18
+"/Users/adee/Desktop/crib-chat/src/react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/Users/adee/Desktop/crib-chat/src/reportWebVitals.js", "JavaScript", 0, 0, 0, 0, 12, 0, 0, 0, 0, 2, 14
+"/Users/adee/Desktop/crib-chat/src/routes/ChatRoom/ChatRoom.scss", "SCSS", 21, 0, 0, 0, 0, 0, 0, 0, 0, 5, 26
+"/Users/adee/Desktop/crib-chat/src/routes/ChatRoom/ChatRoom.tsx", "TypeScript React", 0, 0, 26, 0, 0, 0, 0, 0, 0, 3, 29
+"/Users/adee/Desktop/crib-chat/src/routes/Home/Home.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/adee/Desktop/crib-chat/src/routes/Home/Home.tsx", "TypeScript React", 0, 0, 8, 0, 0, 0, 0, 0, 0, 4, 12
+"/Users/adee/Desktop/crib-chat/src/stories/Button.stories.tsx", "TypeScript React", 0, 0, 30, 0, 0, 0, 0, 0, 1, 8, 39
+"/Users/adee/Desktop/crib-chat/src/stories/Button.tsx", "TypeScript React", 0, 0, 28, 0, 0, 0, 0, 0, 18, 3, 49
+"/Users/adee/Desktop/crib-chat/src/stories/Header.stories.tsx", "TypeScript React", 0, 0, 14, 0, 0, 0, 0, 0, 1, 6, 21
+"/Users/adee/Desktop/crib-chat/src/stories/Header.tsx", "TypeScript React", 0, 0, 44, 0, 0, 0, 0, 0, 0, 4, 48
+"/Users/adee/Desktop/crib-chat/src/stories/button.css", "CSS", 0, 0, 0, 30, 0, 0, 0, 0, 0, 1, 31
+"/Users/adee/Desktop/crib-chat/src/stories/header.css", "CSS", 0, 0, 0, 23, 0, 0, 0, 0, 0, 4, 27
+"/Users/adee/Desktop/crib-chat/tsconfig.json", "JSON", 0, 0, 0, 0, 0, 26, 0, 0, 0, 1, 27
+"Total", "-", 298, 0, 341, 53, 82, 113, 29, 38, 63, 193, 1210
