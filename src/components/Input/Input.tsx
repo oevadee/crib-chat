@@ -5,9 +5,17 @@ import { AiOutlineSearch } from "react-icons/ai";
 export interface InputProps {
   placeholder: string;
   uiType: string;
+  onInput?: () => void;
+  value?: string | number;
 }
 
-const Input: FC<InputProps> = ({ placeholder = "", uiType, ...props }) => {
+const Input: FC<InputProps> = ({
+  placeholder = "",
+  uiType,
+  onInput,
+  value,
+  ...props
+}) => {
   const [inputValue, setInputValue] = useState("");
 
   return (
@@ -20,10 +28,10 @@ const Input: FC<InputProps> = ({ placeholder = "", uiType, ...props }) => {
       )}
       <input
         placeholder={uiType === "data" ? "" : placeholder}
-        value={inputValue}
-        onInput={(e: ChangeEvent<HTMLInputElement>) =>
-          setInputValue(e.target.value)
-        }
+        value={inputValue && value}
+        onInput={(e: ChangeEvent<HTMLInputElement>) => {
+          setInputValue(e.target.value);
+        }}
       />
     </div>
   );

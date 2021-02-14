@@ -10,6 +10,7 @@ import { SidebarState } from "./reducers/sidebarReducer";
 import { useDispatch } from "react-redux";
 import { toggleSidebar } from "./actions/sidebarAction";
 import Login from "./routes/Login/Login";
+import Register from "./routes/Register/Register";
 
 function App() {
   const sidebarOpen = useSelector<SidebarState>((state) => state.sidebarOpen);
@@ -42,6 +43,9 @@ function App() {
         <Router>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
         </Router>
       )}
