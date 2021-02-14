@@ -36,6 +36,19 @@
   background: $background-white;
 
   &:hover {
-    background: $background-white / 0.8;
+    background: $background-white / 0.9;
   }
+}
+
+.accent {
+  background: $background-accent;
+
+  &:hover {
+    background: $background-accent / 0.9;
+  }
+}
+
+.transparent {
+  background: transparent;
+  border: $border-secondary;
 }
