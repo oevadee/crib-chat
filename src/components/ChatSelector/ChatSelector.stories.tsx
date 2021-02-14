@@ -10,12 +10,14 @@ export default {
     (Story) => (
       <div
         style={{
-          width: "100%",
+          width: "250px",
           height: "100vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          background: "rgb(15, 16, 17)",
+          padding: "20px",
         }}
       >
         <Story />

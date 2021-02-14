@@ -8,16 +8,7 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div style={{ height: "100vh", width: "100vw" }}>
         <Story />
       </div>
     ),
