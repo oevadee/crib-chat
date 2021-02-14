@@ -1,0 +1,39 @@
+@import "../../_variables";
+
+.chatSelector {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  transition: $transition;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    background: $background-primary;
+  }
+
+  p {
+    flex: 1;
+    margin-left: 10px;
+  }
+}
+
+.favorite {
+  background: $background-input-secondary !important;
+
+  &:hover {
+    background: $background-input-secondary / 0.9 !important;
+  }
+
+  p {
+    color: $color-secondary;
+  }
+}

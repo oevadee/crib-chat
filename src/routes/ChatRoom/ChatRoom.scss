@@ -5,6 +5,7 @@
   border: $border-primary;
   display: flex;
   flex-direction: column;
+  flex: 0.8;
 
   .chatRoom__messages {
     width: 100%;

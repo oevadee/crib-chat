@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 $background-primary: rgb(34, 36, 38);
-$background-secondary: rgb(15, 16, 17);
+$background-secondary: rgb(20, 22, 25);
+$background-black: rgb(15, 16, 17);
 $background-input-secondary: rgb(51, 53, 55);
 $background-accent: rgb(12, 99, 159);
 $background-white: rgb(250, 250, 250);
@@ -17,4 +18,4 @@ $border-secondary: 2px solid rgb(85, 89, 93);
 $font-noto: "Noto Sans JP", sans-serif;
 $font-lato: "Lato", sans-serif;
 
-$transition: 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$transition: 200ms ease-out;

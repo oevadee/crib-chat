@@ -9,7 +9,7 @@
     flex: 0.8;
     display: flex;
     flex-direction: column;
-    padding: 40px 60px;
+    padding: 40px;
     border: $border-primary;
 
     h1 {
@@ -59,9 +59,15 @@
         align-items: flex-start;
         justify-content: space-between;
         border-bottom: $border-primary;
-        padding: 20px 0;
+        padding: 20px 10px;
         text-decoration: none;
         color: $color-primary;
+        transition: background $transition;
+
+        &:hover {
+          background: $background-input-secondary;
+          border-radius: 15px;
+        }
 
         .profile__settings__options__button__icon {
           width: 2.5rem;
@@ -92,7 +98,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 40px 60px;
+    padding: 40px;
     border: $border-primary;
     position: relative;
 
@@ -155,7 +161,7 @@
       align-items: center;
       justify-content: space-between;
       position: absolute;
-      width: calc(100% - 120px);
+      width: calc(100% - 80px);
       bottom: 40px;
     }
   }
