@@ -5,12 +5,20 @@ import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineMessage, AiOutlineBell } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { IconContext } from "react-icons";
+import { useDispatch } from "react-redux";
+import { toggleSidebar } from "../../actions/sidebarAction";
 
 export interface NavbarProps {
   onClick?: () => void;
 }
 
 const Navbar: FC<NavbarProps> = ({ ...props }) => {
+  const sidebarDispatch = useDispatch();
+
+  const onToggleSidebar = () => {
+    sidebarDispatch(toggleSidebar());
+  };
+
   return (
     <IconContext.Provider
       value={{ size: "1.5rem", color: "rgb(139, 140, 141)" }}
@@ -23,9 +31,9 @@ const Navbar: FC<NavbarProps> = ({ ...props }) => {
         </div>
         <nav>
           <div className="navbar__navIcons">
-            <NavLink to="/">
+            <div className="navbar__navIcons__search" onClick={onToggleSidebar}>
               <BiSearchAlt />
-            </NavLink>
+            </div>
             <NavLink to="/chatroom">
               <AiOutlineMessage />
             </NavLink>
