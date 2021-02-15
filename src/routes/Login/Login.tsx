@@ -4,12 +4,25 @@ import { VscFlame } from "react-icons/vsc";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-interface LoginProps {}
+interface LoginProps {
+  setUser: (user: boolean) => void;
+}
 
-const Login: FC<LoginProps> = () => {
+const Login: FC<LoginProps> = ({ setUser }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+
+  const loginUser = async () => {
+    axios.get("http://localhost:3000/users").then((res) => {
+      const data = res.data;
+      data.some(
+        (user: { login: string; password: string }) =>
+          user.login === login && user.password === password
+      ) && setUser(true);
+    });
+  };
 
   return (
     <div className="login">
@@ -34,6 +47,8 @@ const Login: FC<LoginProps> = () => {
       </div>
       <div className="login__button">
         <Button
+          disabled={!login || !password}
+          onClick={loginUser}
           text="SIGN IN NOW"
           uiType="shortBulky"
           bgColor="white"

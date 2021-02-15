@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/react-redux": "^7.1.16",
     "axios": "^0.21.1",
+    "json-server": "^0.16.3",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -28,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "server": "json-server --watch src/data/users.json"
   },
   "eslintConfig": {
     "extends": [

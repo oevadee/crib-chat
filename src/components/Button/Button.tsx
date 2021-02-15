@@ -6,11 +6,24 @@ export interface ButtonProps {
   uiType: string;
   bgColor: string;
   color: string;
+  onClick?: () => void;
+  disabled?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ text, uiType, bgColor, color }) => {
+const Button: FC<ButtonProps> = ({
+  text,
+  uiType,
+  bgColor,
+  color,
+  onClick,
+  disabled,
+}) => {
   return (
-    <button className={`button ${uiType} ${bgColor}`}>
+    <button
+      className={`button ${uiType} ${bgColor}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
       <p style={{ color: color }}>{text}</p>
     </button>
   );

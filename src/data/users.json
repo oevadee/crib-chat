@@ -1,10 +1,12 @@
-[
-  {
-    "login": "oevadee",
-    "password": "test"
-  },
-  {
-    "login": "tester",
-    "password": "test"
-  }
-]
+{
+  "users": [
+    {
+      "login": "oevadee",
+      "password": "test"
+    },
+    {
+      "login": "tester",
+      "password": "test"
+    }
+  ]
+}

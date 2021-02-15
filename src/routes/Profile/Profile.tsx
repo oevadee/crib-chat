@@ -9,7 +9,9 @@ import { BsPersonFill } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineBell } from "react-icons/ai";
 
-interface ProfileProps {}
+interface ProfileProps {
+  setUser: (user: boolean) => void;
+}
 
 const profileRoutes = [
   {
@@ -26,7 +28,7 @@ const profileRoutes = [
   },
 ];
 
-const Profile: FC<ProfileProps> = () => {
+const Profile: FC<ProfileProps> = ({ setUser }) => {
   const [firstNameValue, setFirstNameValue] = useState("");
   const [lastNameValue, setLastNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -130,6 +132,7 @@ const Profile: FC<ProfileProps> = () => {
             uiType="shortBulky"
             bgColor="transparent"
             color="rgb(250, 250, 250)"
+            onClick={() => setUser(false)}
           />
         </div>
       </div>
