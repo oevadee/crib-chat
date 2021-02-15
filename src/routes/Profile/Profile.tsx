@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ChangeEvent, FC, SyntheticEvent, useState } from "react";
 import { Link, Route, Router, Switch, useRouteMatch } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Checkbox from "../../components/Checkbox/Checkbox";
@@ -27,6 +27,9 @@ const profileRoutes = [
 ];
 
 const Profile: FC<ProfileProps> = () => {
+  const [firstNameValue, setFirstNameValue] = useState("");
+  const [lastNameValue, setLastNameValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
   const { path, url } = useRouteMatch();
 
   return (
@@ -83,10 +86,25 @@ const Profile: FC<ProfileProps> = () => {
               <h3>Personal Informations</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
               <div className="profile__actions__personalInformations__nameInputs">
-                <Input placeholder="First Name" uiType="data" />
-                <Input placeholder="Last Name" uiType="data" />
+                <Input
+                  placeholder="First Name"
+                  uiType="data"
+                  onInput={setFirstNameValue}
+                  inputValue={firstNameValue}
+                />
+                <Input
+                  placeholder="Last Name"
+                  uiType="data"
+                  onInput={setLastNameValue}
+                  inputValue={lastNameValue}
+                />
               </div>
-              <Input placeholder="Email Adress" uiType="data" />
+              <Input
+                placeholder="Email Adress"
+                uiType="data"
+                onInput={setEmailValue}
+                inputValue={emailValue}
+              />
             </div>
           </Route>
           <Route path={`${path}/notifications`}>

@@ -13,7 +13,7 @@ const Sidebar: FC<SidebarProps> = () => {
       <IconContext.Provider
         value={{ color: "rgb(250, 250, 250)", size: "1.25rem" }}
       >
-        <Input placeholder="Search" uiType="search" />
+        {/* <Input placeholder="Search" uiType="search" /> */}
         <div className="sidebar__section">
           <div className="sidebar__section__header">
             <p>Favourites</p>

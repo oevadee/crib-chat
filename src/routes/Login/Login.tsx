@@ -9,7 +9,7 @@ interface LoginProps {}
 
 const Login: FC<LoginProps> = () => {
   const [login, setLogin] = useState("");
-  const [register, setRegister] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="login">
@@ -22,12 +22,15 @@ const Login: FC<LoginProps> = () => {
         <Input
           placeholder="Login"
           uiType="data"
-          // onInput={(e: ChangeEvent<HTMLInputElement>) =>
-          //   setLogin(e.target.value)
-          // }
-          value={login}
+          onInput={setLogin}
+          inputValue={login}
         />
-        <Input placeholder="Password" uiType="data" />
+        <Input
+          placeholder="Password"
+          uiType="data"
+          onInput={setPassword}
+          inputValue={password}
+        />
       </div>
       <div className="login__button">
         <Button

@@ -15,7 +15,7 @@ import Register from "./routes/Register/Register";
 function App() {
   const sidebarOpen = useSelector<SidebarState>((state) => state.sidebarOpen);
   const sidebarDispatch = useDispatch();
-  const user = null;
+  const user = true;
 
   const onToggleSidebar = () => {
     sidebarDispatch(toggleSidebar());

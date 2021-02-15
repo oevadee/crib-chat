@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import "./Register.scss";
 import { VscFlame } from "react-icons/vsc";
 import Input from "../../components/Input/Input";
@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 interface RegisterProps {}
 
 const Register: FC<RegisterProps> = () => {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   return (
     <div className="register">
       <div className="register__header">
@@ -16,9 +20,24 @@ const Register: FC<RegisterProps> = () => {
         <p>Hello there! Sign up by creating new account</p>
       </div>
       <div className="register__inputs">
-        <Input placeholder="Register" uiType="data" />
-        <Input placeholder="Password" uiType="data" />
-        <Input placeholder="Confirm Password" uiType="data" />
+        <Input
+          placeholder="Register"
+          uiType="data"
+          onInput={setLogin}
+          inputValue={login}
+        />
+        <Input
+          placeholder="Password"
+          uiType="data"
+          onInput={setPassword}
+          inputValue={password}
+        />
+        <Input
+          placeholder="Confirm Password"
+          uiType="data"
+          onInput={setConfirmPassword}
+          inputValue={confirmPassword}
+        />
       </div>
       <div className="register__button">
         <Button
