@@ -1,10 +1,4 @@
-import React, {
-  ChangeEvent,
-  FC,
-  InputHTMLAttributes,
-  SyntheticEvent,
-  useState,
-} from "react";
+import React, { ChangeEvent, FC } from "react";
 import "./Input.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 

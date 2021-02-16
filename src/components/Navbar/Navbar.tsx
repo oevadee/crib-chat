@@ -10,7 +10,7 @@ export interface NavbarProps {
   onToggleSidebar?: () => void;
 }
 
-const Navbar: FC<NavbarProps> = ({ onToggleSidebar, ...props }) => {
+const Navbar: FC<NavbarProps> = ({ onToggleSidebar }) => {
   return (
     <IconContext.Provider
       value={{ size: "1.5rem", color: "rgb(139, 140, 141)" }}

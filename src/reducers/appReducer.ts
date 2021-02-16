@@ -1,6 +1,6 @@
-import { ToggleSidebarAction } from "../actions/sidebarAction";
+import { ToggleSidebarAction } from "../actions/appAction";
 
-export interface SidebarState {
+export interface AppState {
   sidebarOpen: boolean;
 }
 
@@ -8,8 +8,8 @@ const initialState = {
   sidebarOpen: false,
 };
 
-const sidebarReducer = (
-  state: SidebarState = initialState,
+const appReducer = (
+  state: AppState = initialState,
   action: ToggleSidebarAction
 ) => {
   switch (action.type) {
@@ -23,4 +23,4 @@ const sidebarReducer = (
   }
 };
 
-export default sidebarReducer;
+export default appReducer;

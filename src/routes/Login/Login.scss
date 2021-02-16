@@ -48,16 +48,34 @@
 
   .login__passwordReset {
     margin-bottom: 20px;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+
     small {
+      font-size: 0.75rem;
       margin-right: 10px;
     }
 
     button {
+      font-size: 0.75rem;
       background: none;
       border: none;
       color: $color-secondary;
       font-weight: 600;
       cursor: pointer;
+    }
+  }
+
+  .login__signUp {
+    @extend .login__passwordReset;
+    opacity: 1;
+
+    small,
+    button {
+      font-size: 1rem;
     }
   }
 }

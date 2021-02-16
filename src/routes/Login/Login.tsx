@@ -1,26 +1,29 @@
-import React, { ChangeEvent, FC, useState } from "react";
+import React, { FC, useState } from "react";
 import "./Login.scss";
 import { VscFlame } from "react-icons/vsc";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../actions/userActions";
 
-interface LoginProps {
-  setUser: (user: boolean) => void;
-}
+interface LoginProps {}
 
-const Login: FC<LoginProps> = ({ setUser }) => {
+const Login: FC<LoginProps> = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const userDispatch = useDispatch();
 
-  const loginUser = async () => {
-    axios.get("http://localhost:3000/users").then((res) => {
+  const onLoginUser = () => {
+    axios.get("http://localhost:8080/users").then((res) => {
       const data = res.data;
       data.some(
         (user: { login: string; password: string }) =>
-          user.login === login && user.password === password
-      ) && setUser(true);
+          user.login === login &&
+          user.password === password &&
+          userDispatch(loginUser(user))
+      );
     });
   };
 
@@ -48,7 +51,7 @@ const Login: FC<LoginProps> = ({ setUser }) => {
       <div className="login__button">
         <Button
           disabled={!login || !password}
-          onClick={loginUser}
+          onClick={onLoginUser}
           text="SIGN IN NOW"
           uiType="shortBulky"
           bgColor="white"
@@ -59,7 +62,7 @@ const Login: FC<LoginProps> = ({ setUser }) => {
         <small>Forgot Password?</small>
         <button>Reset</button>
       </div>
-      <div className="login__passwordReset">
+      <div className="login__signUp">
         <small>Don't have an account?</small>
         <Link to="register">
           <button>Sign up</button>

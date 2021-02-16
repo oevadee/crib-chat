@@ -1,5 +1,5 @@
+import { useEffect } from "react";
 import "./App.scss";
-import Navbar from "./components/Navbar/Navbar";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,23 +9,33 @@ import {
 import Home from "./routes/Home/Home";
 import ChatRoom from "./routes/ChatRoom/ChatRoom";
 import Profile from "./routes/Profile/Profile";
-import Sidebar from "./components/Sidebar/Sidebar";
-import { useSelector } from "react-redux";
-import { SidebarState } from "./reducers/sidebarReducer";
-import { useDispatch } from "react-redux";
-import { toggleSidebar } from "./actions/sidebarAction";
 import Login from "./routes/Login/Login";
 import Register from "./routes/Register/Register";
-import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggleSidebar } from "./actions/appAction";
+import { ICombinedReducers } from "./store";
 
 function App() {
-  const [user, setUser] = useState(false);
-  const sidebarOpen = useSelector<SidebarState>((state) => state.sidebarOpen);
+  const user = useSelector((state: ICombinedReducers) => state.user.user);
+  const sidebarOpen = useSelector(
+    (state: ICombinedReducers) => state.app.sidebarOpen
+  );
   const sidebarDispatch = useDispatch();
 
   const onToggleSidebar = () => {
     sidebarDispatch(toggleSidebar());
   };
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
+  useEffect(() => {
+    console.log(sidebarOpen);
+  }, [sidebarOpen]);
 
   return (
     <div className="app">
@@ -41,7 +51,7 @@ function App() {
               <ChatRoom />
             </Route>
             <Route path="/profile">
-              <Profile setUser={setUser} />
+              <Profile />
             </Route>
           </Switch>
         </Router>
@@ -49,7 +59,7 @@ function App() {
         <Router>
           <Redirect to="/login"></Redirect>
           <Route path="/login">
-            <Login setUser={setUser} />
+            <Login />
           </Route>
           <Route path="/register">
             <Register />

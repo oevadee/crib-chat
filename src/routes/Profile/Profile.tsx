@@ -1,5 +1,5 @@
-import React, { ChangeEvent, FC, SyntheticEvent, useState } from "react";
-import { Link, Route, Router, Switch, useRouteMatch } from "react-router-dom";
+import React, { FC, useState } from "react";
+import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import Input from "../../components/Input/Input";
@@ -8,10 +8,10 @@ import { IconContext } from "react-icons";
 import { BsPersonFill } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineBell } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../actions/userActions";
 
-interface ProfileProps {
-  setUser: (user: boolean) => void;
-}
+interface ProfileProps {}
 
 const profileRoutes = [
   {
@@ -28,11 +28,12 @@ const profileRoutes = [
   },
 ];
 
-const Profile: FC<ProfileProps> = ({ setUser }) => {
+const Profile: FC<ProfileProps> = () => {
   const [firstNameValue, setFirstNameValue] = useState("");
   const [lastNameValue, setLastNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const { path, url } = useRouteMatch();
+  const userDispatch = useDispatch();
 
   return (
     <div className="profile">
@@ -132,7 +133,7 @@ const Profile: FC<ProfileProps> = ({ setUser }) => {
             uiType="shortBulky"
             bgColor="transparent"
             color="rgb(250, 250, 250)"
-            onClick={() => setUser(false)}
+            onClick={() => userDispatch(logoutUser())}
           />
         </div>
       </div>

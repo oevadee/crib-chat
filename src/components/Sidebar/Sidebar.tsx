@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Input from "../Input/Input";
 import "./Sidebar.scss";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -8,12 +8,18 @@ import { IconContext } from "react-icons";
 export interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = () => {
+  const [searchValue, setSearchValue] = useState("");
   return (
     <div className="sidebar">
       <IconContext.Provider
         value={{ color: "rgb(250, 250, 250)", size: "1.25rem" }}
       >
-        {/* <Input placeholder="Search" uiType="search" /> */}
+        <Input
+          placeholder="Search"
+          uiType="search"
+          onInput={setSearchValue}
+          inputValue={searchValue}
+        />
         <div className="sidebar__section">
           <div className="sidebar__section__header">
             <p>Favourites</p>
