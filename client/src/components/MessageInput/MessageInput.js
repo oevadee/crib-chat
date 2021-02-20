@@ -3,8 +3,12 @@ import "./MessageInput.scss";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
-const MessageInput = () => {
+const MessageInput = ({ onPost }) => {
   const [messageInputInnerHTML, setMessageInputInnerHTML] = useState("");
+
+  const handleMessageAdd = () => {
+    onPost(messageInputInnerHTML);
+  };
 
   return (
     <div className="messageInput">
@@ -17,7 +21,9 @@ const MessageInput = () => {
         }}
       />
       <div className="messageInput__postButton">
-        {messageInputInnerHTML.length >= 12 && <button>Post</button>}
+        {messageInputInnerHTML.length >= 12 && (
+          <button onClick={handleMessageAdd}>Post</button>
+        )}
       </div>
     </div>
   );

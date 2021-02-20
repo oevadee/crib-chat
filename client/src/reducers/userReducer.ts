@@ -2,8 +2,12 @@ import { LoginUserAction, LogoutUserAction } from "../actions/userActions";
 
 export interface UserState {
   user: {
+    id: number;
     login: string;
     password: string;
+    firstName: string;
+    lastName: string;
+    profileImg: string;
   } | null;
 }
 

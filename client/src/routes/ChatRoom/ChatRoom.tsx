@@ -1,10 +1,17 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import "./ChatRoom.scss";
 import Message from "../../components/Message/Message";
 import MessageInput from "../../components/MessageInput/MessageInput";
 import Header from "../../components/Header/Header";
+import { useSelector } from "react-redux";
+import { ICombinedReducers } from "../../store";
 
 const ChatRoom: FC = () => {
+  const user = useSelector((state: ICombinedReducers) => state.user.user);
+  const [newMessage, setNewMessage] = useState("");
+
+  const postMessage = () => {};
+
   return (
     <div className="chatRoom">
       <Header />
@@ -19,7 +26,7 @@ const ChatRoom: FC = () => {
         <Message />
       </div>
       <div className="chatRoom__messageInput">
-        <MessageInput />
+        <MessageInput onPost={setNewMessage} />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./App.scss";
 import {
   BrowserRouter as Router,
@@ -18,7 +17,7 @@ import { useDispatch } from "react-redux";
 import { toggleSidebar } from "./actions/appAction";
 import { ICombinedReducers } from "./store";
 
-function App() {
+const App = () => {
   const user = useSelector((state: ICombinedReducers) => state.user.user);
   const sidebarOpen = useSelector(
     (state: ICombinedReducers) => state.app.sidebarOpen
@@ -28,14 +27,6 @@ function App() {
   const onToggleSidebar = () => {
     sidebarDispatch(toggleSidebar());
   };
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
-
-  useEffect(() => {
-    console.log(sidebarOpen);
-  }, [sidebarOpen]);
 
   return (
     <div className="app">
@@ -68,6 +59,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;
