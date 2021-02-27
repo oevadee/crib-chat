@@ -23,19 +23,22 @@ const Register: FC<RegisterProps> = () => {
         <Input
           placeholder="Register"
           uiType="data"
-          onInput={setLogin}
+          name="register"
+          register={null}
           inputValue={login}
         />
         <Input
           placeholder="Password"
           uiType="data"
-          onInput={setPassword}
+          name="emailAdress"
+          register={null}
           inputValue={password}
         />
         <Input
           placeholder="Confirm Password"
           uiType="data"
-          onInput={setConfirmPassword}
+          name="emailAdress"
+          register={null}
           inputValue={confirmPassword}
         />
       </div>

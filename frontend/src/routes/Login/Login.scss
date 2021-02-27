@@ -44,6 +44,8 @@
 
   .login__button {
     margin-bottom: 40px;
+    display: grid;
+    place-items: center;
   }
 
   .login__passwordReset {

@@ -10,8 +10,6 @@ const ChatRoom: FC = () => {
   const user = useSelector((state: ICombinedReducers) => state.user.user);
   const [newMessage, setNewMessage] = useState("");
 
-  const postMessage = () => {};
-
   return (
     <div className="chatRoom">
       <Header />
