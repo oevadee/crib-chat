@@ -32,15 +32,14 @@ const Profile: FC<ProfileProps> = () => {
   const user = useSelector((state: ICombinedReducers) => state.user.user);
   const { path, url } = useRouteMatch();
   const [defaults, setDefaults] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
+    firstName: '',
+    lastName: '',
+    email: '',
     id: user?.id
   });
 
   useEffect(() => {
     if (user) {
-      console.log(user.email);
       setDefaults({
         firstName: user.firstName,
         lastName: user.lastName,
@@ -49,7 +48,7 @@ const Profile: FC<ProfileProps> = () => {
       });
     }
   }, [user]);
-
+  
   return (
     <div className="profile">
       <div className="profile__settings">

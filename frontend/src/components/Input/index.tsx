@@ -9,15 +9,20 @@ export interface InputProps {
   uiType: string;
   register: any;
   inputValue: any;
+  onInput?: () => void;
+  error?: any;
+  style?: any;
 }
 
 const Input: FC<InputProps> = ({
   name,
-  type = 'text',
+  type = "text",
   placeholder = "Placeholder...",
   uiType,
   register,
   inputValue,
+  onInput,
+  error,
   ...props
 }) => {
   return (
@@ -32,6 +37,7 @@ const Input: FC<InputProps> = ({
         type={type}
         name={name}
         ref={register}
+        onInput={onInput}
         placeholder={uiType === "data" ? "" : placeholder}
       />
     </div>

@@ -46,9 +46,19 @@ router.put("/update-profile", async (req, res) => {
     const { id } = req.body.user;
     const { rows } = await db.query("SELECT * FROM users WHERE id = $1", [id]);
     let newUser;
-    if (email) newUser = { ...rows[0], email: email };
-    if (firstName) newUser = { ...newUser, first_name: firstName };
+    if (email.length > 6) newUser = { ...rows[0], email: email };
+    else
+      res.status(400).json({ message: "Email must be at least 6 characters" });
+    if (firstName.length > 3) newUser = { ...newUser, first_name: firstName };
+    else
+      res
+        .status(400)
+        .json({ message: "First name must be at least 3 characters" });
     if (lastName) newUser = { ...newUser, last_name: lastName };
+    else
+      res
+        .status(400)
+        .json({ message: "Last name must be at least 3 characters" });
     await db.query(
       "UPDATE users SET first_name = $1, last_name = $2, email = $3 WHERE id = $4",
       [firstName, lastName, email, id]
