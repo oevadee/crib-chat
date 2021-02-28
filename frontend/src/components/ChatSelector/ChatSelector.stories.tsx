@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import ChatSelector, { ChatSelectorProps } from "./ChatSelector";
+import ChatSelector, { ChatSelectorProps } from ".";
 
 export default {
   title: "components/ChatSelector",

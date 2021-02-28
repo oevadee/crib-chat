@@ -1,5 +1,5 @@
 import React from "react";
-import MessageInput from "./MessageInput";
+import MessageInput from ".";
 
 export default {
   title: "components/MessageInput",

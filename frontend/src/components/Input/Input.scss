@@ -33,6 +33,12 @@
     border: none;
     outline: none;
     z-index: 3;
+
+    &:-webkit-autofill {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: white !important;
+    }
   }
 }
 

@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import "./ChatRoom.scss";
-import Message from "../../components/Message/Message";
-import MessageInput from "../../components/MessageInput/MessageInput";
-import Header from "../../components/Header/Header";
+import Message from "../../components/Message";
+import MessageInput from "../../components/MessageInput";
+import Header from "../../components/Header";
 import { useSelector } from "react-redux";
 import { ICombinedReducers } from "../../store";
 

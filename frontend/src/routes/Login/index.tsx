@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import "./Login.scss";
 import { VscFlame } from "react-icons/vsc";
-import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -15,12 +15,12 @@ const Login: FC<LoginProps> = () => {
   const userDispatch = useDispatch();
   const { register, handleSubmit, errors, watch } = useForm({
     defaultValues: {
-      login: "",
+      email: "",
       password: "",
     },
   });
 
-  const watchLogin = watch("login");
+  const watchEmail = watch("email");
   const watchPassword = watch("password");
 
   const onLoginUser = async (values) => {
@@ -39,11 +39,11 @@ const Login: FC<LoginProps> = () => {
       <form onSubmit={handleSubmit(onLoginUser)}>
         <div className="login__inputs">
           <Input
-            name="login"
-            placeholder="Login"
+            name="email"
+            placeholder="Email"
             uiType="data"
             register={register}
-            inputValue={watchLogin}
+            inputValue={watchEmail}
           />
           <Input
             name="password"
