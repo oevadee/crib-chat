@@ -15,10 +15,11 @@ const Sidebar: FC<SidebarProps> = () => {
         value={{ color: "rgb(250, 250, 250)", size: "1.25rem" }}
       >
         <Input
+          name="search"
           placeholder="Search"
           uiType="search"
-          onInput={setSearchValue}
           inputValue={searchValue}
+          register={null}
         />
         <div className="sidebar__section">
           <div className="sidebar__section__header">

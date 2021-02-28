@@ -3,16 +3,20 @@ import "./Input.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 
 export interface InputProps {
+  name: string;
+  type?: string;
   placeholder: string;
   uiType: string;
-  onInput: (value: string) => void;
-  inputValue: string;
+  register: any;
+  inputValue: any;
 }
 
 const Input: FC<InputProps> = ({
-  placeholder = "",
+  name,
+  type = 'text',
+  placeholder = "Placeholder...",
   uiType,
-  onInput,
+  register,
   inputValue,
   ...props
 }) => {
@@ -25,11 +29,10 @@ const Input: FC<InputProps> = ({
         </label>
       )}
       <input
+        type={type}
+        name={name}
+        ref={register}
         placeholder={uiType === "data" ? "" : placeholder}
-        value={inputValue}
-        onInput={(e: ChangeEvent<HTMLInputElement>) => {
-          onInput(e.target.value);
-        }}
       />
     </div>
   );

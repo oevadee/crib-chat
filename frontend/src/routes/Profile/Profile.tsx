@@ -90,22 +90,25 @@ const Profile: FC<ProfileProps> = () => {
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
               <div className="profile__actions__personalInformations__nameInputs">
                 <Input
+                  name="firstName"
                   placeholder="First Name"
                   uiType="data"
-                  onInput={setFirstNameValue}
                   inputValue={firstNameValue}
+                  register={null}
                 />
                 <Input
+                  name="lastName"
                   placeholder="Last Name"
                   uiType="data"
-                  onInput={setLastNameValue}
                   inputValue={lastNameValue}
+                  register={null}
                 />
               </div>
               <Input
+                name="emailAdress"
+                register={null}
                 placeholder="Email Adress"
                 uiType="data"
-                onInput={setEmailValue}
                 inputValue={emailValue}
               />
             </div>
