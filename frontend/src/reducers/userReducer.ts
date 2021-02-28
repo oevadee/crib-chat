@@ -3,7 +3,7 @@ import { LoginUserAction, LogoutUserAction } from "../actions/userActions";
 export interface UserState {
   user: {
     id: number;
-    login: string;
+    email: string;
     password: string;
     firstName: string;
     lastName: string;

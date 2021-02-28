@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
-import Input from "../Input/Input";
+import Input from "../Input";
 import "./Sidebar.scss";
 import { AiOutlinePlus } from "react-icons/ai";
-import ChatSelector from "../ChatSelector/ChatSelector";
+import ChatSelector from "../ChatSelector";
 import { IconContext } from "react-icons";
 
 export interface SidebarProps {}

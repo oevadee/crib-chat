@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import "./Register.scss";
 import { VscFlame } from "react-icons/vsc";
-import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -12,13 +12,13 @@ interface RegisterProps {}
 const Register: FC<RegisterProps> = () => {
   const { register, handleSubmit, errors, watch } = useForm({
     defaultValues: {
-      login: "",
+      email: "",
       password: "",
       confirmPassword: "",
     },
   });
 
-  const watchLogin = watch("login");
+  const watchEmail = watch("email");
   const watchPassword = watch("password");
   const watchConfirmPassword = watch("confirmPassword");
 
@@ -36,11 +36,11 @@ const Register: FC<RegisterProps> = () => {
       <form onSubmit={handleSubmit(handleRegister)}>
         <div className="register__inputs">
           <Input
-            placeholder="Register"
+            placeholder="Email"
             uiType="data"
-            name="login"
+            name="email"
             register={register}
-            inputValue={watchLogin}
+            inputValue={watchEmail}
           />
           <Input
             placeholder="Password"

@@ -1,15 +1,15 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
-import Button from "../../components/Button/Button";
-import Checkbox from "../../components/Checkbox/Checkbox";
-import Input from "../../components/Input/Input";
+import Button from "../../components/Button";
+import Checkbox from "../../components/Checkbox";
 import "./Profile.scss";
 import { IconContext } from "react-icons";
 import { BsPersonFill } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineBell } from "react-icons/ai";
-import { useDispatch } from "react-redux";
-import { logoutUser } from "../../actions/userActions";
+import { useSelector } from "react-redux";
+import { ICombinedReducers } from "../../store";
+import PersonalInformationsForm from "./components/PersonalInformationsForm";
 
 interface ProfileProps {}
 
@@ -29,11 +29,26 @@ const profileRoutes = [
 ];
 
 const Profile: FC<ProfileProps> = () => {
-  const [firstNameValue, setFirstNameValue] = useState("");
-  const [lastNameValue, setLastNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
+  const user = useSelector((state: ICombinedReducers) => state.user.user);
   const { path, url } = useRouteMatch();
-  const userDispatch = useDispatch();
+  const [defaults, setDefaults] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    id: user?.id
+  });
+
+  useEffect(() => {
+    if (user) {
+      console.log(user.email);
+      setDefaults({
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        id: user.id
+      });
+    }
+  }, [user]);
 
   return (
     <div className="profile">
@@ -55,6 +70,7 @@ const Profile: FC<ProfileProps> = () => {
           <div className="profile__settings__options">
             {profileRoutes.map((route) => (
               <Link
+                key={route.h3}
                 to={`${url}/${route.linkTo}`}
                 style={{ textDecoration: "none" }}
               >
@@ -85,33 +101,7 @@ const Profile: FC<ProfileProps> = () => {
             </div>
           </Route>
           <Route path={`${path}/personal-informations`}>
-            <div className="profile__actions__personalInformations">
-              <h3>Personal Informations</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-              <div className="profile__actions__personalInformations__nameInputs">
-                <Input
-                  name="firstName"
-                  placeholder="First Name"
-                  uiType="data"
-                  inputValue={firstNameValue}
-                  register={null}
-                />
-                <Input
-                  name="lastName"
-                  placeholder="Last Name"
-                  uiType="data"
-                  inputValue={lastNameValue}
-                  register={null}
-                />
-              </div>
-              <Input
-                name="emailAdress"
-                register={null}
-                placeholder="Email Adress"
-                uiType="data"
-                inputValue={emailValue}
-              />
-            </div>
+            <PersonalInformationsForm defaults={defaults} />
           </Route>
           <Route path={`${path}/notifications`}>
             <div className="profile__actions__notifications">
@@ -124,21 +114,6 @@ const Profile: FC<ProfileProps> = () => {
             </div>
           </Route>
         </Switch>
-        <div className="profile__actions__buttons">
-          <Button
-            text="Save Changes"
-            uiType="shortBulky"
-            bgColor="accent"
-            color="rgb(250, 250, 250)"
-          />
-          <Button
-            text="Sign Out"
-            uiType="shortBulky"
-            bgColor="transparent"
-            color="rgb(250, 250, 250)"
-            onClick={() => userDispatch(logoutUser())}
-          />
-        </div>
       </div>
     </div>
   );

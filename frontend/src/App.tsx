@@ -5,13 +5,13 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Home from "./routes/Home/Home";
-import ChatRoom from "./routes/ChatRoom/ChatRoom";
-import Profile from "./routes/Profile/Profile";
-import Login from "./routes/Login/Login";
-import Register from "./routes/Register/Register";
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Home from "./routes/Home";
+import ChatRoom from "./routes/ChatRoom";
+import Profile from "./routes/Profile";
+import Login from "./routes/Login";
+import Register from "./routes/Register";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { toggleSidebar } from "./actions/appAction";
