@@ -24,10 +24,9 @@ const Login: FC<LoginProps> = () => {
   const watchPassword = watch("password");
 
   const onLoginUser = async (values) => {
-    axios.post("http://localhost:8080/api/users", values).then((res) => {
-      console.log(values);
-      console.log(res.data);
-    });
+    const res = await axios.post("http://localhost:8080/api/users/login", values);
+    const data = await res.data
+    userDispatch(loginUser(data))
   };
 
   return (

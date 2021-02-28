@@ -4,13 +4,27 @@ import { VscFlame } from "react-icons/vsc";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 interface RegisterProps {}
 
 const Register: FC<RegisterProps> = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const { register, handleSubmit, errors, watch } = useForm({
+    defaultValues: {
+      login: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
+  const watchLogin = watch("login");
+  const watchPassword = watch("password");
+  const watchConfirmPassword = watch("confirmPassword");
+
+  const handleRegister = async (values) => {
+    await axios.post("http://localhost:8080/api/users/register", values);
+  };
 
   return (
     <div className="register">
@@ -19,37 +33,39 @@ const Register: FC<RegisterProps> = () => {
         <h1>Sign Up</h1>
         <p>Hello there! Sign up by creating new account</p>
       </div>
-      <div className="register__inputs">
-        <Input
-          placeholder="Register"
-          uiType="data"
-          name="register"
-          register={null}
-          inputValue={login}
-        />
-        <Input
-          placeholder="Password"
-          uiType="data"
-          name="emailAdress"
-          register={null}
-          inputValue={password}
-        />
-        <Input
-          placeholder="Confirm Password"
-          uiType="data"
-          name="emailAdress"
-          register={null}
-          inputValue={confirmPassword}
-        />
-      </div>
-      <div className="register__button">
-        <Button
-          text="SIGN IN NOW"
-          uiType="shortBulky"
-          bgColor="white"
-          color="#333"
-        />
-      </div>
+      <form onSubmit={handleSubmit(handleRegister)}>
+        <div className="register__inputs">
+          <Input
+            placeholder="Register"
+            uiType="data"
+            name="login"
+            register={register}
+            inputValue={watchLogin}
+          />
+          <Input
+            placeholder="Password"
+            uiType="data"
+            name="password"
+            register={register}
+            inputValue={watchPassword}
+          />
+          <Input
+            placeholder="Confirm Password"
+            uiType="data"
+            name="confirmPassword"
+            register={register}
+            inputValue={watchConfirmPassword}
+          />
+        </div>
+        <div className="register__button">
+          <Button
+            text="SIGN IN NOW"
+            uiType="shortBulky"
+            bgColor="white"
+            color="#333"
+          />
+        </div>
+      </form>
       <div className="register__passwordReset">
         <small>Already have an account?</small>
         <Link to="login">
