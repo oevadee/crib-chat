@@ -5,10 +5,28 @@ import MessageInput from "../../components/MessageInput";
 import Header from "../../components/Header";
 import { useSelector } from "react-redux";
 import { ICombinedReducers } from "../../store";
+import axios from "axios";
+import { useForm } from "react-hook-form";
 
 const ChatRoom: FC = () => {
   const user = useSelector((state: ICombinedReducers) => state.user.user);
   const [newMessage, setNewMessage] = useState("");
+  const { watch, handleSubmit, control } = useForm();
+
+  const watchMessage = watch("message");
+
+  console.log(watchMessage);
+
+  const handlePost = async () => {
+    if (user) {
+      const { data } = await axios.post("http://localhost:8080/api/posts", {
+        postCreator: `${user.firstName} ${user.lastName}`,
+        postHTML: newMessage,
+      });
+
+      console.log(data);
+    }
+  };
 
   return (
     <div className="chatRoom">
@@ -24,7 +42,9 @@ const ChatRoom: FC = () => {
         <Message />
       </div>
       <div className="chatRoom__messageInput">
-        <MessageInput onPost={setNewMessage} />
+        <form onSubmit={handleSubmit(handlePost)}>
+          <MessageInput onPost={setNewMessage} control={control} />
+        </form>
       </div>
     </div>
   );

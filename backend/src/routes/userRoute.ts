@@ -7,6 +7,12 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   try {
     const { email, password, confirmPassword } = req.body;
+    if (
+      password.length !== confirmPassword.length &&
+      password.toLowerCase() === confirmPassword.toLowerCase()
+    ) {
+      return res.status(400).json({ message: `Passwords doesn't match` });
+    }
     const hash = await bcrypt.hash(password, 10);
     await db.query(`INSERT INTO users(email, password) values($1, $2)`, [
       email,

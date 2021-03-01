@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./MessageInput.scss";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { Controller, useForm } from "react-hook-form";
 
-const MessageInput = ({ onPost }) => {
+const MessageInput = ({ onPost, control }) => {
   const [messageInputInnerHTML, setMessageInputInnerHTML] = useState("");
 
   const handleMessageAdd = () => {
@@ -12,18 +13,25 @@ const MessageInput = ({ onPost }) => {
 
   return (
     <div className="messageInput">
-      <CKEditor
-        editor={ClassicEditor}
-        data="<p></p>"
-        onChange={(event, editor) => {
-          const data = editor.getData();
-          setMessageInputInnerHTML(data);
-        }}
+      <Controller
+        control={control}
+        name="message"
+        render={(
+          { onChange, onBlur, value, name, ref },
+          { invalid, isTouched, isDirty }
+        ) => (
+          <CKEditor
+            editor={ClassicEditor}
+            data="<p></p>"
+            onChange={(event, editor) => {
+              const data = editor.getData();
+              setMessageInputInnerHTML(data);
+            }}
+          />
+        )}
       />
       <div className="messageInput__postButton">
-        {messageInputInnerHTML.length >= 12 && (
-          <button onClick={handleMessageAdd}>Post</button>
-        )}
+        {messageInputInnerHTML.length >= 12 && <button>Post</button>}
       </div>
     </div>
   );
